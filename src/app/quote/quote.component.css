@@ -1,0 +1,36 @@
+.jumbotron{
+ background-image: url(images/43129.jpg)
+}
+.nush{color: rgb(60, 22, 196);
+    font-weight: 200;
+}
+
+#shilla{
+    font-style: italic;
+    font-weight: 200;
+
+}
+
+h1{
+    color: chartreuse;
+}
+
+#crl{
+    color: rgb(13, 172, 235);
+    font-weight: 200;
+
+}
+
+#bton{
+   color:blue;
+   
+
+}
+
+#dlt{
+   background-color: rgb(189, 4, 179);
+}
+
+.six{
+    text-align: center;
+}

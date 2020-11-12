@@ -1,0 +1,31 @@
+<div class="jumbotron">
+  <h1>nushy-quotes</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let quote of quotes;let i = index'>
+        <div class="nush">
+          <h6 id={{i}}>{{quote.name}} </h6>
+        </div>
+        <div id="shilla">
+          <h6 id="{{i}}">{{quote.description}}</h6> 
+        </div>
+        <div id="crl">
+         <h6 id="{{i}}">due on {{quote.day|dateCount}} days ago</h6> 
+        </div>
+         
+          <button (click)='upvote(i)'><span><i class="fas fa-thumbs-up" id="bton"></i>Like{{quote.like}}</span></button>
+          <button (click)= 'deleteQuote($event,i )' id="dlt">Delete Quote</button>
+          <button (click)='downvote(i)'><span><i class="fas fa-thumbs-down" id="bton"></i>Dislike{{quote.unlike}}</span></button>
+       
+        <div *ngIf='quote.showDescription'>
+          <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+  </div>
+  <p *ngIf='quotes.length > 5'></p>
+</div>
